@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=David+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.home-container {
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.landing-img{
+    height: 50%;
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-top: 130px;
+}
+
+.home-text p{
+    padding: 5px;
+    font-weight: 550;
+    font-size: 40px;
+    font-family: 'Francois One', sans-serif;
+    margin-top: 180px;
+}
+
+.btns {
+    background-color: #00b5e9;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    color: white;
+}
+
+.btns:hover{
+    background-color: #02a2ce;
+}
+
+.btns a {
+    text-decoration: none;
+    color: white !important;
+}
+
+.btns a:hover {
+    color: white !important;
+}
+
+@media (max-width:992px) {
+    .landing-img{
+        height: 80%;
+        width: 60%;
+        margin-top:30px;
+    }
+    .home-text p{
+        font-size: 30px;
+        margin-top: 5px !important;
+    }
+}
+
+@media (max-width:676px) {
+    .landing-img{
+        height: 80%;
+        width: 80%;
+        margin-top:50px;
+    }
+    .home-text p{
+        font-size: 30px;
+        margin-top: 30px !important;
+        margin-left: 10px;
+    }
+    .btns{
+        margin-left: 15px;
+    }
+}
+
+/* ========== about-section ========== */
+
+.about-sec {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: aliceblue;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    width: 150px;
+    margin: auto;
+}
+
+.title::after {
+    content: '';
+    width: 40px;
+    height: 3px;
+    background-color: rgba(57, 57, 233, 0.89);
+    position: absolute;
+    right: 0%;
+    top: 50%;
+}
+
+.title::before {
+    content: '';
+    width: 40px;
+    height: 3px;
+    background-color: rgba(119, 104, 252, 0.89);
+    position: absolute;
+    left: 0%;
+    top: 50%;
+}
+
+.content-sec {
+    margin-top: 80px !important;
+}
+
+.content-sec .about-text {
+    margin-top: 24px;
+    font-family: 'Bangers', cursive;
+}
+
+.content-sec .about-text h2 {
+    font-family: 'Bangers', cursive;
+    word-spacing: 4px;
+}
+
+.content-sec .about-text p {
+    font-family: 'David Libre', serif;
+    font-size: 18px;
+}
+
+.content-sec .img-fluid {
+    width: 90%;
+    height: 90%;
+    display: block;
+    margin: auto;
+}
+
+@media (max-width:992px) {
+    .content-sec {
+        margin-top: 40px !important;
+    }
+
+    .content-sec .about-text {
+        text-align: center;
+        margin-top: 14px;
+    }
+}
+
+/* =========== Features Section =============*/
+
+.feature-sec {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
+.feature-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    width: 180px;
+    margin: auto;
+}
+
+.feature-title::after {
+    content: '';
+    width: 40px;
+    height: 3px;
+    background-color: rgba(57, 57, 233, 0.89);
+    position: absolute;
+    right: 0%;
+    top: 50%;
+}
+
+.feature-title::before {
+    content: '';
+    width: 40px;
+    height: 3px;
+    background-color: rgba(119, 104, 252, 0.89);
+    position: absolute;
+    left: 0%;
+    top: 50%;
+}
+
+.feature-font h4 {
+    font-family: 'Merriweather', serif;
+}
+
+.feature-font p {
+    font-family: 'David Libre', serif;
+}
+
+.feature-img {
+    width: 250px;
+    height: 200px;
+    display: block;
+    margin: auto;
+}
+
+/* ============= Testimonial Section ============== */
+
+.testimonial-sec {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+}
+
+.testimonial-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    width: 210px;
+    margin: auto;
+}
+
+.testimonial-title::after {
+    content: '';
+    width: 40px;
+    height: 3px;
+    background-color: rgba(57, 57, 233, 0.89);
+    position: absolute;
+    right: 0%;
+    top: 50%;
+}
+
+.testimonial-title::before {
+    content: '';
+    width: 40px;
+    height: 3px;
+    background-color: rgba(119, 104, 252, 0.89);
+    position: absolute;
+    left: 0%;
+    top: 50%;
+}
+
+.testimonial-1 {
+    background: #fff;
+    padding: 14px;
+    color: #000;
+}
+
+.col-md-4 {
+    margin-top: 25px;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: -3px;
+    padding-left: 5px;
+}
+
+.place {
+    font-size: 13px;
+    color: #080808;
+    padding-left: 5px;
+}
+
+.place-2 {
+    font-size: 13px;
+    color: #080808;
+    padding-left: 5px;
+}
+
+.testimonial-1 ,.testimonial-2 ,.testimonial-3 {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    ;
+}
+
+.testimonial-2 {
+    padding: 14px;
+    color: black;
+}
+
+/* ========= Footer ======== */
+
+.footer-sec{
+    background-color: #5fb2fa;
+    margin-bottom: 0px !important;
+    color: black;
+}
+
+.social{
+    color: black;
+}

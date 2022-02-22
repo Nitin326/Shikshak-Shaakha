@@ -1,0 +1,60 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.login-container {
+    background: linear-gradient(0deg, rgba(23, 23, 24, 0.589), rgba(35, 35, 36, 0.582)), url('../assets/Images/back.jpg') repeat;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card{
+    background-color: rgba(0, 0, 0, 0.486) !important;
+    color: white !important;
+    margin-top: 40px;
+}
+
+.card h1{
+    color: rgba(255, 255, 255, 0.856) !important;
+  }
+
+.form-group label{
+    color: rgba(255, 255, 255, 0.733);
+}
+
+.form-control{
+    background-color: rgba(56, 56, 56, 0.438) !important;
+    border: 1px solid rgba(255, 255, 255, 0.37) !important;
+    color: white !important;
+}
+
+.form-control::placeholder{
+    color: rgba(255, 255, 255, 0.445) !important;
+}
+
+.form-control:focus{
+    border: 1px solid rgba(255, 255, 255, 0.781) !important;
+    box-shadow: none !important;
+}
+
+.btn{
+    background-color: rgba(249, 247, 253, 0.527) !important;
+}
+
+.btn:hover{
+    background-color: rgba(249, 247, 253, 0.664) !important;
+}
+
+.lead a{
+    color: rgba(255, 255, 255, 0.733);
+}
+
+.lead a:hover{
+    color: rgba(255, 255, 255, 0.733);
+    text-decoration: none;
+}

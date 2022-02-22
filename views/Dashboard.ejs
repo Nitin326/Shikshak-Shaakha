@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets//Images/favicon.ico">
+    <title>Shikshak Shaakha</title>
+    <link href="../assets/Dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+
+<body>
+    <%- include('./Navbar.ejs') %>
+
+        <!-- ================ Filter Form ================-->
+
+        <div class="filter-form p-3 mb-5">
+            <div class="serach-title">
+                <p>Find Your Educator <i class="fa fa-search"></i></p>
+            </div>
+            <hr>
+            <div class="form">
+                <form action="/search" method="POST">
+                <div class="row col-lg-12 col-md-12 col-12">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="form-group">
+                            <label for="gender" class="pb-1">Gender</label>
+                            <input type="gender" id="gender" name="gender" class="form-control" placeholder="Filter With Gender"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="city" class="pb-1">City</label>
+                            <input type="city" id="city" name="city" class="form-control" placeholder="Filter With City"/>
+                        </div> 
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="form-group" >
+                            <label for="subject" class="pb-1">Subject</label>
+                            <input type="subject" id="subject" name="subject" class="form-control" placeholder="Filter With Subject"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode" class="pb-1">Pincode</label>
+                            <input type="pincode" id="pincode" name="pincode" class="form-control" placeholder="Filter With Pincode"/>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="filter-btn btn-block">
+                    Search
+                </button>
+            </form>
+            </div>
+        </div>
+        <!-- ================ End of Filter Form =============== -->
+
+        <!-- =========== Database Teachers Data =================== -->
+        <div class="container profile-page">
+            <div class="row col-lg-12 mt-5 pt-3">
+                <% if(records.length >0){ %>
+                <% records.forEach(function(info){ %>
+                    <div class="col-xl-6 col-lg-6 col-md-12 d-flex">
+                        <div class="card profile-header">
+                            <div class="body">
+                                <div class="row col-lg-12 mx-auto card-info">
+                                    <div class="col-lg-4 col-md-4 col-12 mx-auto profile">
+                                        <div class="profile-image float-md-right">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
+                                        </div>
+                                        <h4 class="mt-4 mb-4 text-center"><strong>
+                                                <%= info.name %>
+                                            </strong></h4>
+                                        <p class=" m-t-5 m-b-0 text-center">
+                                            <a title="Twitter" href="#"><i class="fa fa-envelope social"></i></a>
+                                            <a title="Facebook" href="#"><i class="fa fa-facebook social"></i></a>
+                                            <a title="Instagram" href="#"><i class="fa fa-instagram social"></i></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-12 mx-auto profile-info">
+                                        <p><b>Gender </b>- <%= info.gender %>
+                                        </p>
+                                        <p><b>Email </b>-<%= info.email %>
+                                        </p>
+                                        <p><b>Phone </b>-<%= info.phone %>
+                                        </p>
+                                        <p><b>Subject </b>-<%= info.subject %>
+                                        </p>
+                                        <p><b>Qualification </b>-<%= info.qualification %>
+                                        </p>
+                                        <p><b>Address </b>-<%= info.address %>
+                                        </p>
+                                        <p><b>City </b>-<%= info.city %>
+                                        </p>
+                                        <p><b>Pincode </b>-<%= info.pincode %>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% })} else{ %>
+                        <p class="not-found"><i class='fas fa-frown'></i> Sorry No Result Found</p>
+                   <% } %>
+            </div>
+        </div>
+</body>
+
+</html>

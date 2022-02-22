@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets//Images/favicon.ico">
+    <title>Shikshak Shaakha</title>
+    <link href="../assets/Home.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('./Navbar.ejs') %>
+
+    <!-- =============== Landing Page ================ -->
+        <div class="home-container">
+            <div class="row col-lg-12 mx-auto land-page">
+                <div class="col-lg-6 col-md-9 col-sm-10 col-12 mx-auto">
+                    <img class="landing-img" src="../assets/Images/landing.gif" class="img-fluid" alt="Moving Gif">
+                </div>
+                <div class="col-lg-6 col-md-7 col-sm-8 col-11 mx-auto home-text">
+                    <p>The roots of the education are bitter, But the fruit is sweet.</p>
+                    <button class="btns btn1"><a href="/user/register"> Join Us </a></button>
+                    <button class="btns"><a href="/contact"> Contact </a></button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- ======================== About Section ===================== -->
+        <div class="about-sec">
+            <p class="title">About</p>
+            <div class="row mx-auto content-sec">
+                <div class="col-lg-5 col-md-8 col-11 mx-auto">
+                    <img src="../assets//Images//classroom.jpeg" class="img-fluid" alt="classrooms_img">
+                </div>
+                <div class="col-lg-5 col-md-8 col-11 mx-auto about-text">
+                    <h2>WHY SHIKASHSAK SHAAKHA ?</h2>
+                    <p>We on our platform connect passionate educators to disperse the benefits of technology to
+                        schools, classrooms, and communities across the locality—both online and at local level. We
+                        provide a forum for educators to collaborate, share, and support each other, also to make local
+                        educators a league apart.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- =============== Features Section ================ -->
+
+        <div class="feature-sec">
+            <p class="feature-title">Features</p>
+            <div class="row col-lg-12 col-md-12 col-sm-12 col-12 pt-5 mx-auto">
+
+                <div class="col-lg-3 col-md-7 col-sm-8 col-10 mx-auto pt-4 text-center feature-font">
+                    <img class="feature-img pb-4"
+                        src="https://thumbs.dreamstime.com/b/indian-teacher-students-wearing-face-masks-maintaining-social-distancing-study-classroom-back-school-covid-197113176.jpg"
+                        data-aos="fade-right">
+                    <h4 data-aos="fade-right">Find solutions to your problems.</h4>
+                    <p data-aos="fade-right">Search years of topics, conversations, and problem-solving from a diverse
+                        community of teachers. Ask your questions publicly, privately, or even anonymously. We have
+                        teachers standing by to help you.</p>
+                </div>
+
+                <div class="col-lg-3 col-md-7 col-sm-8 col-10 mx-auto pt-4 text-center feature-font">
+                    <img class="feature-img pb-4"
+                        src="https://thumbs.dreamstime.com/b/women-via-videocall-talking-using-webcam-pc-internet-connection-view-over-girl-shoulder-indian-ethnicity-teacher-share-knowledge-179206151.jpg"
+                        data-aos="zoom-in-up">
+                    <h4 data-aos="zoom-in-up">Connect with people who matter.</h4>
+                    <p data-aos="zoom-in-up">Find people you already know and trust. Connect with new people using
+                        community groups and member profiles. Reach out to others, individually or in small groups,
+                        using our private messaging system.</p>
+                </div>
+
+                <div class="col-lg-3 col-md-7 col-sm-8 col-10 mx-auto pt-4 text-center feature-font">
+                    <img class="feature-img pb-4"
+                        src="https://thumbs.dreamstime.com/b/indian-village-school-computer-teacher-educating-students-computer-boy-operating-laptop-system-seating-rock-stone-matured-156278258.jpg"
+                        data-aos="fade-left">
+                    <h4 data-aos="fade-left">Stay informed and educated.</h4>
+                    <p data-aos="fade-left">Get notified when someone connects with you or responds to your
+                        contributions. Stay updated on people and topics you follow. See the latest trends and
+                        discussions within the community. Continue to invest in your professional growth.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========= Testimonial Section ============= -->
+
+        <div class="testimonial-sec">
+            <div class="testimonial-title">Testimonials</div>
+            <div class="container pt-5">
+                <div class="row col-lg-12 mx-auto">
+                    <div class="col-lg-4 col-md-4 mx-auto mt-3">
+                        <div class="testimonial-1 rounded"><img class="mb-3" src="../assets//Images//symbol.png"
+                                width="40">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris<br><br></p>
+                            <div class="d-flex flex-row align-items-center"><img class="rounded-circle"
+                                    src="../assets//Images/profile.jpg" width="40">
+                                <div class="ml-2 about"><span class="d-block name">Giralle Cross</span><span
+                                        class="place">Operator Trade, Little AR, TX</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 mx-auto mt-3">
+                        <div class="testimonial-2 rounded"><img class="mb-3" src="../assets//Images//symbol.png"
+                                width="40">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris<br><br></p>
+                            <div class="d-flex flex-row align-items-center"><img class="rounded-circle"
+                                    src="../assets//Images/profile.jpg" width="40">
+                                <div class="ml-2 about"><span class="d-block name"> Sam Cross</span><span
+                                        class="place-2">Android Developer, Little AR, TX</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 mx-auto mt-3">
+                        <div class="testimonial-1 rounded"><img class="mb-3" src="../assets//Images//symbol.png"
+                                width="40">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris<br><br></p>
+                            <div class="d-flex flex-row align-items-center"><img class="rounded-circle"
+                                    src="../assets//Images/profile.jpg" width="40">
+                                <div class="ml-2 about"><span class="d-block name">Marry Cross</span><span
+                                        class="place">Operator Trade, Little AR, CA</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+
+        <div class="footer-sec">
+            <div class="text-center center-block pt-4 mb-4">
+                <a href="#"><i id="social-fb"
+                        class="fa fa-facebook-square fa-3x social"></i></a>
+                <a href="#"><i id="social-tw"
+                        class="fa fa-twitter-square fa-3x social"></i></a>
+                <a href="#"><i id="social-gp"
+                        class="fa fa-google-plus-square fa-3x social"></i></a>
+                <a href="#"><i id="social-em"
+                        class="fa fa-envelope-square fa-3x social"></i></a>
+            </div>
+            <p class="text-center pb-3">© 2021 Shikshak Shaakha All risghts reserved.</p>
+        </div>
+
+</body>
+</html>

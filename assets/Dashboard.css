@@ -1,0 +1,112 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #00b5e9 !important;
+}
+
+.card-info{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card {
+    background: #fff;
+    transition: .5s;
+    border: 0;
+    margin-bottom: 30px;
+    border-radius: .1875rem;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    box-shadow: none;
+}
+
+.card .body {
+    font-size: 14px;
+    color: #424242;
+    font-weight: 400;
+}
+
+.profile{
+    background-color: #01d28e !important;
+    color: white;
+}
+
+.profile, .profile-info{
+    padding-top: 20px;
+    background-color: #fffdfd;
+}
+
+.social{
+    color: white;
+    font-size: 20px !important;
+    margin:0 5px;
+}
+
+.profile-page .profile-header .profile-image img {
+    border-radius: 50%;
+    width: 140px;
+    border: 3px solid #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    display: block;
+    margin: auto;
+}
+
+/* ============== Filter Form ============== */
+
+.filter-form{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    width: 70%;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 70px;
+}
+
+@media (max-width:956px) {
+    .filter-form{
+        width: 80%;
+    }
+}
+
+@media (max-width:656px) {
+    .filter-form{
+        width: 95%;
+    }
+}
+
+.filter-form .serach-title{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 550;
+    color: rgba(0, 0, 0, 0.705);
+}
+
+.form-group{
+    padding: 10px;
+}
+
+.filter-btn{
+    padding: 7px 20px;
+    background-color: rgb(158, 90, 1);
+    color: white;
+    font-family: 550;
+    border: none;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.filter-btn:hover{
+    background-color: rgb(143, 81, 1);
+}
+
+.not-found{
+    text-align: center;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.712);
+    margin-bottom: 40px;
+}
