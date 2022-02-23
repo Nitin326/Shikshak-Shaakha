@@ -16,7 +16,12 @@
 </head>
 
 <body>
-    <%- include('./Navbar.ejs') %>
+    
+    <% if(cuser){ %>
+          <%- include('./UpdateNav.ejs') %>
+    <% }else{ %>
+        <%- include('./Navbar.ejs') %>
+    <% } %>
 
         <div class="profile-page p-3 mb-4">
             <div class="serach-title">
@@ -35,9 +40,9 @@
                             <%= cuser.name %>
                         </strong></h4>
                     <p class=" m-t-5 m-b-0 text-center">
-                        <a title="Twitter" href="#"><i class="fa fa-envelope social"></i></a>
-                        <a title="Facebook" href="#"><i class="fa fa-facebook social"></i></a>
-                        <a title="Instagram" href="#"><i class="fa fa-instagram social"></i></a>
+                        <a title="email"  href="mailto:<%= cuser.email %>"><i class="fa fa-envelope social"></i></a>
+                        <a title="Facebook" target="_blank" href="<%= cuser.facebook %>"><i class="fa fa-facebook social"></i></a>
+                        <a title="Instagram" target="_blank" href="<%= cuser.instagram %>"><i class="fa fa-instagram social"></i></a>
                     </p>
                 </div>
                 <div class="col-lg-6 col-md-6 col-12 profile-text">
@@ -94,6 +99,16 @@
                             <label for="phone">Phone Number</label>
                             <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter Phone Number"
                             autocomplete="off" value="<%= cuser.phone %>" />
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="facebook">Facebook Profile</label>
+                            <input type="text" id="facebook" name="facebook" class="form-control" placeholder="Enter Facebook Profile Link"
+                            autocomplete="off" value="<%= cuser.facebook %>" />
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="instagram">Instagram Profile</label>
+                            <input type="text" id="instagram" name="instagram" class="form-control" placeholder="Enter Instagram Profile Link"
+                            autocomplete="off" value="<%= cuser.instagram %>" />
                         </div>
                         <div class="form-group mt-2">
                             <label for="subject">Subject</label>

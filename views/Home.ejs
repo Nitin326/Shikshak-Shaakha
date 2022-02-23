@@ -10,8 +10,14 @@
     <link href="../assets/Home.css" rel="stylesheet">
 </head>
 
-<body>
-    <%- include('./Navbar.ejs') %>
+<body style="background-color: #5fb2fa;">
+    
+    
+    <% if(cuser){ %>
+        <%- include('./UpdateNav.ejs') %>
+    <% }else{ %>
+      <%- include('./Navbar.ejs') %>
+    <% } %>
 
     <!-- =============== Landing Page ================ -->
         <div class="home-container">
@@ -133,7 +139,7 @@
 
         <!-- Footer -->
 
-        <div class="footer-sec">
+        <div class="footer-sec" style="margin-bottom: 0px; padding-bottom: 0px !important;">
             <div class="text-center center-block pt-4 mb-4">
                 <a href="#"><i id="social-fb"
                         class="fa fa-facebook-square fa-3x social"></i></a>
@@ -144,7 +150,7 @@
                 <a href="#"><i id="social-em"
                         class="fa fa-envelope-square fa-3x social"></i></a>
             </div>
-            <p class="text-center pb-3">© 2021 Shikshak Shaakha All risghts reserved.</p>
+            <p class="text-center pb-2">© 2021 Shikshak Shaakha All risghts reserved.</p>
         </div>
 
 </body>

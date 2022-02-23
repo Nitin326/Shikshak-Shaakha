@@ -13,6 +13,12 @@ const UserSchema = new mongoose.Schema({
     phone:{
         type:String
     },
+    facebook:{
+        type:String
+    },
+    instagram:{
+        type:String
+    },
     subject:{
         type:String
     },

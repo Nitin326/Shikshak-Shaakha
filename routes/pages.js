@@ -2,15 +2,18 @@ const Router = require('express').Router();
 const { ensureAuthenenticated } = require('../config/index')
 const eduModal = require('../modal/Users');
 const ContactModal = require('../modal/contact');
+const user = require('../config/passport');
 
 Router.get('/', (req, res) => {
-    res.render('Home');
+    var user = req.user;
+    res.render('Home',{cuser:user});
 })
 
 Router.get('/dashboard', (req, res) => {
+    var user = req.user;
     eduModal.find({}, function (err, data) {
         if (!err) {
-            res.render('Dashboard', { title: "Teachers Records", records: data });
+            res.render('Dashboard', { title: "Teachers Records", records: data, cuser:user });
         } else {
             throw err;
         }
@@ -18,12 +21,13 @@ Router.get('/dashboard', (req, res) => {
 })
 
 Router.get('/profile', ensureAuthenenticated, (req, res) => {
-    const user = req.user;
+    var user = req.user;
     res.render('Profile',{cuser:user});
 })
 
 Router.get('/contact', (req, res) => {
-    res.render('Contact')
+    var user = req.user;
+    res.render('Contact',{cuser:user})
 })
 
 Router.post('/contact', (req, res) => {
@@ -39,7 +43,7 @@ Router.post('/contact', (req, res) => {
 })
 
 Router.post('/search', (req, res) => {
-
+    var user = req.user;
     var fgender = req.body.gender;
     var fcity = req.body.city;
     var fsubject = req.body.subject;
@@ -57,7 +61,7 @@ Router.post('/search', (req, res) => {
     var eduFilter = eduModal.find(filterParameter);
     eduFilter.find({}, function (err, data) {
         if (!err) {
-            res.render('Dashboard', { title: "Teachers Records", records: data });
+            res.render('Dashboard', { title: "Teachers Records", records: data,cuser:user });
         } else {
             throw err;
         }

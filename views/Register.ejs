@@ -40,12 +40,22 @@
                         <div class="form-group">
                             <label for="gender">Gender</label>
                             <input type="text" id="gender" name="gender" class="form-control" placeholder="Your Gender"
-                            autocomplete="off" value="<%= typeof phone != 'undefined' ? phone : '' %>" />
+                            autocomplete="off" value="<%= typeof gender != 'undefined' ? gender : '' %>" />
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
                             <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter Phone Number"
                             autocomplete="off" value="<%= typeof phone != 'undefined' ? phone : '' %>" />
+                        </div>
+                        <div class="form-group">
+                            <label for="facebook">Facebook Profile</label>
+                            <input type="link" id="facebook" name="facebook" class="form-control" placeholder="Your Facebook Profile link"
+                            autocomplete="off" value="<%= typeof facebook != 'undefined' ? facebook : '' %>" />
+                        </div>
+                        <div class="form-group">
+                            <label for="instagram">Instagram Profile</label>
+                            <input type="link" id="instagram" name="instagram" class="form-control" placeholder="Your Instagram Profile link"
+                            autocomplete="off" value="<%= typeof instagram != 'undefined' ? instagram : '' %>" />
                         </div>
                         <div class="form-group">
                             <label for="subject">Subject</label>

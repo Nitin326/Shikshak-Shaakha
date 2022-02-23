@@ -2,6 +2,7 @@ const Router = require('express').Router();
 const User = require('../modal/Users');
 const bcrypt = require('bcrypt');
 const passport = require('passport');
+const authUser = require('../config/passport');
 
 Router.get('/login',(req,res) => {
     res.render('Login');
@@ -13,11 +14,11 @@ Router.get('/register',(req,res) => {
 
 Router.post('/register',(req,res) => {
      
-     const {name,email,gender,phone,subject,qualification,address,city,pincode,password,password2} = req.body;
+     const {name,email,gender,phone,facebook,instagram,subject,qualification,address,city,pincode,password,password2} = req.body;
 
      let errors = [];
      
-     if(!name || !email || !gender || !phone || !subject || !qualification || !address || !city || !pincode || !password || !password2) {
+     if(!name || !email || !gender || !phone || !facebook || !instagram || !subject || !qualification || !address || !city || !pincode || !password || !password2) {
         errors.push({ msg: 'please fill the all fields' });
     }
     
@@ -37,6 +38,8 @@ Router.post('/register',(req,res) => {
             email,
             gender,
             phone,
+            facebook,
+            instagram,
             subject,
             qualification,
             address,
@@ -59,6 +62,8 @@ Router.post('/register',(req,res) => {
                     email,
                     gender,
                     phone,
+                    facebook,
+                    instagram,
                     subject,
                     qualification,
                     address,
@@ -70,7 +75,7 @@ Router.post('/register',(req,res) => {
             }
             else{
                 const newUser = new User({
-                    name,email,gender,phone,subject,qualification,address,city,pincode,password
+                    name,email,gender,phone,facebook,instagram,subject,qualification,address,city,pincode,password
                 })
 
                //Hash Password
@@ -109,6 +114,8 @@ Router.post('/edit/:id', (req, res) => {
         email:req.body.email,
         gender:req.body.gender,
         phone:req.body.phone,
+        facebook:req.body.facebook,
+        instagram:req.body.instagram,
         subject:req.body.subject,
         qualification:req.body.qualification,
         address:req.body.address,

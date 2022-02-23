@@ -11,7 +11,13 @@
 </head>
 
 <body>
-    <%- include('./Navbar.ejs') %>
+
+    <% if(cuser){ %>
+        <%- include('./UpdateNav.ejs') %>
+    <% }else{ %>
+      <%- include('./Navbar.ejs') %>
+    <% } %>
+    
         <section class="ftco-section">
             <div class="container mt-5 pt-5">
                 <div class="row mt-5 justify-content-center">
