@@ -35,11 +35,9 @@ mongoose.connect(Url, {
      .catch((err) => console.log(err));
 
      //connect to DB
-mongoose.connect(Url_Contact, {
+mongoose.createConnection(Url_Contact, {
      useNewUrlParser: true,
 })
-     .then(() => console.log("Contact Database connected"))
-     .catch((err) => console.log(err));
 
 //Middleware
 app.use(express.json());

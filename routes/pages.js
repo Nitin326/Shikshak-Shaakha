@@ -37,7 +37,6 @@ Router.post('/contact', (req, res) => {
         subject: req.body.subject,
         message: req.body.message
     })
-    console.log(CUser);
     CUser.save();
     res.redirect('/');
 })
