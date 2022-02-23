@@ -24,7 +24,6 @@ app.use('/assets', express.static('assets'));
 const dotenv = require('dotenv');
 dotenv.config();
 const Url = process.env.Db_Url;
-const Url_Contact = process.env.Contact_Url;
 const Port = process.env.PORT || 5000;
 
 //connect Register to DB
