@@ -1,5 +1,5 @@
 const Router = require('express').Router();
-const User = require('../modal/Users');
+const User = require('../modal/UserDetail');
 const bcrypt = require('bcrypt');
 const passport = require('passport');
 const authUser = require('../config/passport');

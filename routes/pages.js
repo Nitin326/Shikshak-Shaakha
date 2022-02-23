@@ -1,6 +1,6 @@
 const Router = require('express').Router();
 const { ensureAuthenenticated } = require('../config/index')
-const eduModal = require('../modal/Users');
+const eduModal = require('../modal/UserDetail');
 const ContactModal = require('../modal/contact');
 const user = require('../config/passport');
 
